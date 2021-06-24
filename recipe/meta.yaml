@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-discord" %}
-{% set version = "1.0.1" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-discord-{{ version }}.tar.gz
-  sha256: c72b98541350cbbe7cfe47aaba566a42de41ce987170999dc628fa8dc93f2869
+  sha256: 26683497f95084f048399553bc8917fbc9460a857f5400114e3250a25ddbd0cb
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.0.0
+    - apache-airflow >=2.1.0
     - python >=3.6
 
 test:
