@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-discord" %}
-{% set version = "2.0.2" %}
-
+{% set version = "2.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-discord-{{ version }}.tar.gz
-  sha256: 8bad375c43edf5a7b1178438ae35ef02ec070c57745d97eb978e0d73fd50d9d4
+  sha256: 672b49285dd6fd141a3e39767dee8e65ff462cd39a6c8fe4c661b87353fb179c
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -35,9 +34,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Discord for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-discord package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-discord/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
