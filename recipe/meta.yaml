@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-discord" %}
-{% set version = "3.7.1" %}
+{% set version = "3.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 88ee5f7ae01feb8faee6bc9cc6497376d74462bf159614675cbb286accab4add
+  sha256: 44c6a520b1bee6e640e03dfd75edcd2e5dae225c807a4ced33f94e2b9ff9e7bc
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.8
     - apache-airflow-providers-http
-    - apache-airflow >=2.7.0
+    - apache-airflow >=2.8.0
 
 test:
   imports:
