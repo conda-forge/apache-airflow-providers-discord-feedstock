@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-discord" %}
-{% set version = "3.9.3" %}
+{% set version = "3.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_discord-{{ version }}.tar.gz
-  sha256: 58f0643193e8f686567033d3cda04b94514eb0d136c412a03aa20d4580ac8449
+  sha256: e971fee861eeec84cbac4b31b1b5a0c30161e44dd48d66a0e652e874bca49830
 
 build:
   noarch: python
@@ -17,11 +17,12 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core ==3.11.0
+    - flit-core ==3.12.0
     - pip
   run:
     - python >={{ python_min }},<4.dev0
     - apache-airflow >=2.9.0
+    - apache-airflow-providers-common-compat >=1.6.0
     - apache-airflow-providers-http
 
 test:
