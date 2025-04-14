@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-discord" %}
-{% set version = "3.9.4" %}
+{% set version = "3.9.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_discord-{{ version }}.tar.gz
-  sha256: e971fee861eeec84cbac4b31b1b5a0c30161e44dd48d66a0e652e874bca49830
+  sha256: d0f5c93899fee8c27445979096f38feb39ee17a5351cf07279d990d9dd87942e
 
 build:
   noarch: python
