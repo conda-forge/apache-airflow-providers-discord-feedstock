@@ -29,7 +29,7 @@ requirements:
 tests:
   - python:
       imports:
-        - airflow.providers.discord
+      - airflow.providers.discord
       pip_check: true
       python_version: ${{ python_min }}.*
 
