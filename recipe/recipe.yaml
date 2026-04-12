@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-discord
-  version: "3.12.1"
+  version: "3.12.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_discord-${{ version }}.tar.gz
-  sha256: f2ccdfc4a2ab7ea2a565f7871c83b670b3c4e59670ba0efb0148d2e89fd6c733
+  sha256: f181f90c7c8ee20e4bc4c9b81a3412f4a7c76bb75cff1c8b1eaec57de4bb63af
 
 build:
   noarch: python
